@@ -64,16 +64,37 @@
 # print(round(numero1,6))
 # print(round(numero2,2))
 # print(round(numero2,0))
-
+#
 # ------------------------------------------------------------------------------------------------------
-juego="warhamer"
-version=40000
-
-print("El juego "+ juego + " va por la versión " +str(version) +" y en adelante")
+# juego="warhamer"
+# version=40000
+#
+# print("El juego "+ juego + " va por la versión " +str(version) +" y en adelante")
 # ======================================================================================================
-frase="El juego "+ juego + " va por la versión " +str(version) +" y en adelante"
-print(frase)
+# frase="El juego "+ juego + " va por la versión " +str(version) +" y en adelante"
+# print(frase)
 # ======================================================================================================
-frase=f"El juego {juego} va por la version {version} y en adelante"
-print(frase)
+# frase=f"El juego {juego} va por la version {version} y en adelante"
+# print(frase)
 # ------------------------------------------------------------------------------------------------------
+
+# Booleanos
+x=3
+print(0<x<=4)
+print(3>=x>=1)
+print(1<=x>=4)
+print(2>x>5) # Esto no es posible pero lo evalua igualmente
+print(x==3)
+print(1<x==3)
+
+x=6
+print(x<2 and x>5) # &&
+print(x<2 or x>5) # ||
+print(not(x>5))
+
+# Función imput
+nombre=input("Su nombre es:")
+print(f"Usted se llama {nombre}")
+
+edad=int(input("Su edad es:"))
+print(f"Dentro de 10 años tendrá {edad+10} años de edad")
