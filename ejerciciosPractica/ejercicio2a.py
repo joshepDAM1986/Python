@@ -1,3 +1,7 @@
+# EJERCICIO 2:
+# Programar los siguientes mini-juegos de dados (random). No es necesario usar listas y debéis controlar los errores
+# asociados a valores incorrectos (numero de jugadores negativo, un dado es de 6 caras, etc):
+
 # a) Escriba un programa que pida un número de dados, que pida un valor a conseguir y que tire después el número de
 # dados indicado. El jugador gana si saca el valor ganador.
 

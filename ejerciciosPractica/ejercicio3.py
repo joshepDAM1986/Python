@@ -1,11 +1,6 @@
 
 
-# EJERCICIO 2:
-# Programar los siguientes mini-juegos de dados (random). No es necesario usar listas y debéis controlar los errores
-# asociados a valores incorrectos (numero de jugadores negativo, un dado es de 6 caras, etc):
-#
 
-import random
 
 # EJERCICIO 3:
 # Realizar un programa que genere contraseñas aleatorias. El programa pide cuantas contraseñas se van generar y
