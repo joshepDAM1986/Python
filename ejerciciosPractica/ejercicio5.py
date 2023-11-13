@@ -50,6 +50,8 @@ print()
 
 #  Crear otro diccionario a partir del anterior con las frutas ordenadas de mayor a menor precio.
 
+print(max(frutas))
+
 frutasOrdenadas = {fruta:precio for fruta, precio in sorted(frutas.items())}
 print(frutasOrdenadas)
 
