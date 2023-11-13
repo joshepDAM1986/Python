@@ -17,7 +17,6 @@ try:
         numObtenido = random.randint(1, 6)
         print(f"Resultado de la tirada {contTirada}: {numObtenido}")
 
-
         if numObtenido == rAnterior:
             print("Perdiste, salieron dos dados iguales seguidos.")
             break
@@ -25,7 +24,7 @@ try:
         rAnterior = numObtenido
 
     else:
-        print("¡Ganaste! No salieron dos dados iguales seguidos.")
+        print("Ganaste, no salieron dos dados iguales seguidos.")
 
 except ValueError as e:
     print(f"Error: {e}")
