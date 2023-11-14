@@ -9,8 +9,8 @@
 # Dada la nota y el precio que un alumno pago por su matricula calcular el dinero que recibe un alumno en funcion de su
 # rendimiento.
 
-notaAlumno=0
-reconocimiento=0
+notaAlumno=0.0
+reconocimiento=0.0
 categoria=""
 
 try:
