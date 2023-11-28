@@ -5,24 +5,21 @@
 
 import random
 
-try:
-    numJugadores = int(input("Número de jugadores: "))
+numLimite=7
+pJugador=0
 
-    if numJugadores < 2 or numJugadores > 5:
-        raise ValueError("El número de jugadores debe estar entre 2 y 5.")
+numJugadores = int(input("Número de jugadores: "))
 
-    numInicial=7
-
+if numJugadores < 2:
+    print("El número de jugadores debe 2 o mas.")
+else:
     for i in range(numJugadores):
         contJugadores=i+1
         numObtenido = random.randint(1, 6)
         print(f"Resultado del jugador {contJugadores}: {numObtenido}")
 
-        if numObtenido < numInicial:
-            numInicial = numObtenido
-            jPuntos =i+1
+        if numObtenido < numLimite:
+            numLimite = numObtenido
+            pJugador =i+1
 
-    print(f"El jugador con el valor más bajo es el jugador {jPuntos} con {numInicial}.")
-
-except ValueError as e:
-    print(f"Error: {e}")
+print(f"El jugador con el valor más bajo es el jugador {pJugador} con {numLimite}.")

@@ -10,15 +10,13 @@ notas={
     "Miguel":6.0
 }
 
-print("El alumno con mayor nota es",(max(notas, key=notas.get)),
-      "y el de menor nota es",(min(notas, key=notas.get)))
+def alumnoMaxMin():
+    maxAlumno= max(notas, key=notas.get) # Guarda la clave del diccionario con mayor valor (nombre del alumno con mas nota)
+    maxNota= notas[maxAlumno] # Guarda el valor de la clave guardado antes (la nota del alumno con mayor nota)
+    minAlumno = min(notas, key=notas.get)
+    minNota = notas[minAlumno]
+    return(f"El alumno con mayor nota es {maxAlumno} con un {maxNota}\n"
+           f"El alumno con mayor nota es {minAlumno} con un {minNota}")
+print(alumnoMaxMin())
 
-# # -------------------------------------------------------------
 
-maxAlumno= max(notas, key=notas.get)
-maxNota=notas[maxAlumno]
-print(f"El alumno con mayor nota es {maxAlumno} con un {maxNota}")
-
-minAlumno= min(notas, key=notas.get)
-minNota=notas[minAlumno]
-print(f"El alumno con mayor nota es {minAlumno} con un {minNota}")

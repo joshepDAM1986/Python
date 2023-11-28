@@ -27,7 +27,10 @@ notas={
 }
 
 #  Hacer la media de todos los alumnos.
-sumaNotas= sum(notas.values())
-numAlumnos=len(notas)
-mediaTotal= sumaNotas/numAlumnos
-print(f"La media total de clase es {round(mediaTotal,2)}")
+def mediaAlumnos():
+    sumaNotas= sum(notas.values())
+    numAlumnos= len(notas)
+    mediaTotal= sumaNotas/numAlumnos
+    return(f"La media total de clase es {round(mediaTotal,2)}")
+
+print(mediaAlumnos())

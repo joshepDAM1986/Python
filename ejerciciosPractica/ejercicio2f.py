@@ -3,13 +3,13 @@
 
 import  random
 
-try:
 
-    numTiradas = int(input("Número de tiradas: "))
 
-    if numTiradas <= 1 or numTiradas > 5:
-        raise ValueError("El número de tiradas debe estar entre 2 y 5.")
+numTiradas = int(input("Número de tiradas: "))
 
+if numTiradas <= 1 or numTiradas > 5:
+    print("El número de tiradas debe estar entre 2 y 5.")
+else:
     listaTiradasJ1=[random.randint(1,6) for i in range(numTiradas)]
     print(listaTiradasJ1)
     maxResultadoJ1=max(listaTiradasJ1)
@@ -30,7 +30,4 @@ try:
         print("Jugador 2 gana!!")
     else:
         print("Empate!!")
-
-except ValueError as e:
-    print(f"Error: {e}")
 

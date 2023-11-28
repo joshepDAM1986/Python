@@ -22,43 +22,44 @@ frutas= {
     "Naranja":0.7
 }
 
-fruta=""
-precio=0.0
-precioTotal=0.0
-
-kilos=int(input("Ingrese el número de kilos: "))
-
-for elemento, valor  in frutas.items():
-    precio=round(valor*kilos,2)
-    precioTotal+=precio
-    fruta=elemento
-    print(f"{fruta}: {precio}")
-print(f"Precio Total= {precioTotal}")
+def comprarKilos():
+    fruta = ""
+    precio = 0.0
+    precioTotal = 0.0
+    kilos=int(input("Ingrese el número de kilos: "))
+    for elemento, valor  in frutas.items():
+        precio=round(valor*kilos,2)
+        precioTotal+=precio
+        fruta=elemento
+        print(f"{fruta}: {precio}")
+    return(f"Precio Total= {precioTotal}")
+print(comprarKilos())
 print()
+
 
 #  Mostrar la fruta con menor precio por kilo.
 
-fruta=""
-precio=0.0
-
-for elemento, valor in frutas.items():
-    if precio < valor:
-        precio=valor
-        fruta=elemento
-print(fruta,":",precio)
+def frutaBarata():
+    frutaBarata=min(frutas, key=frutas.get)
+    precioFruta=frutas[frutaBarata]
+    return(f"{frutaBarata}:{precioFruta}")
+print(frutaBarata())
 print()
 
 #  Crear otro diccionario a partir del anterior con las frutas ordenadas de mayor a menor precio.
 
-print(max(frutas))
-
-frutasOrdenadas = {fruta:precio for fruta, precio in sorted(frutas.items())}
-print(frutasOrdenadas)
-
-frutasOrdInverted= dict(sorted(frutasOrdenadas.items(), reverse=True))
-print(frutasOrdInverted)
+def diccFrutasOrdenadas():
+    frutasOrdenadas = {fruta: precio for fruta, precio in sorted(frutas.items(), key=lambda x:x[1], reverse=True)}
+    return frutasOrdenadas
+print(diccFrutasOrdenadas())
 print()
 
 #  Crear otro diccionario a partir del anterior con solo las frutas que valgan más de 1€/kg.
-frutasOrdenadas = {fruta:precio for fruta, precio in sorted(frutas.items()) if precio > 1}
-print(frutasOrdenadas)
+
+def diccFrutasCaras():
+    frutasCaras = {}
+    for fruta, precio in frutas.items():
+        if precio > 1:
+            frutasCaras[fruta]=precio
+    return frutasCaras
+print(diccFrutasCaras())

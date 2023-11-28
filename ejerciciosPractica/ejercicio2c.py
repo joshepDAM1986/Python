@@ -2,18 +2,14 @@
 # valor más alto, gana.
 
 import random
+puntosJ1=0
+puntosJ2=0
 
-numAlto1 = 0
-numAlto2 = 0
+numTiradas=int(input("Ingerese el numero de tiradas: "))
 
-try:
-    numTiradas = int(input("Numero de tiradas: "))
-
-    if numTiradas <= 0:
-        raise ValueError("El numero de tiradas tiene q ser un numero entero positivo")
-    elif numTiradas >5:
-        raise ValueError("El numero maximo de tiradas es 5")
-
+if numTiradas <= 0:
+       print("El numero de tiradas no puede ser negativo ni 0")
+else:
     for i in range(numTiradas):
         contTiradas=i+1
         numObtenido1 = random.randint(1, 6)
@@ -24,10 +20,16 @@ try:
 
         if numObtenido1 > numObtenido2:
             print("El jugador 1 gana!")
+            puntosJ1+=1
         elif numObtenido2 > numObtenido1:
             print("El jugador 2 gana!")
+            puntosJ2+=1
         else:
             print("Empate!")
 
-except ValueError as e:
-    print(f"Error: {e}")
+    print(f"El jugador 1 gano un total de {puntosJ1} veces")
+    print(f"El jugador 2 gano un total de {puntosJ2} puntos")
+
+
+
+

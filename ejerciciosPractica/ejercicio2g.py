@@ -2,17 +2,16 @@
 # el jugador gana. Si salen, pierde.
 
 import random
+rAnterior = None
 
-try:
-    numTiradas = int(input("Número de tiradas: "))
+numTiradas = int(input("Número de tiradas: "))
 
-    if numTiradas <= 0 or numTiradas > 5:
-        raise ValueError("El número de tiradas debe estar entre 2 y 5.")
+if numTiradas <= 1:
+    print("El número de tiradas debe ser mayor a 2")
+else:
 
-    rAnterior = None
 
     for i in range(numTiradas):
-
         contTirada=i+1
         numObtenido = random.randint(1, 6)
         print(f"Resultado de la tirada {contTirada}: {numObtenido}")
@@ -22,9 +21,7 @@ try:
             break
 
         rAnterior = numObtenido
-
     else:
         print("Ganaste, no salieron dos dados iguales seguidos.")
 
-except ValueError as e:
-    print(f"Error: {e}")
+

@@ -9,6 +9,11 @@ notas = {
     "Miguel": 6.0
 }
 
-aprobados = {alumno: media for (alumno, media) in notas.items() if media >= 5}
+def diccAprobados():
+    aprobados = {}
+    for nombre, media in notas.items():
+        if media >= 5:
+            aprobados[nombre]=media
+    return aprobados
 
-print(f"aprobados = {aprobados}")
+print(diccAprobados())

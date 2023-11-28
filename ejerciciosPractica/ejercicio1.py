@@ -13,30 +13,26 @@ notaAlumno=0.0
 reconocimiento=0.0
 categoria=""
 
-try:
 
-    notaAlumno = float(input("Ingrese la nota del alumno: "))
-    if notaAlumno <0 or notaAlumno >10:
-        raise ValueError("La nota no puede ser menor de cero ni mayor de 10")
-    precioMatricula = float(input("Ingrese el precio de la matrícula: "))
-    if precioMatricula <0:
-        raise ValueError("El precio de la matricula no puede ser negativo")
+notaAlumno = float(input("Ingrese la nota del alumno: "))
+if notaAlumno <0 or notaAlumno >10:
+    print("La nota no puede ser menor de cero ni mayor de 10")
+precioMatricula = float(input("Ingrese el precio de la matrícula: "))
+if precioMatricula <0:
+    print("El precio de la matricula no puede ser negativo")
 
-    if (notaAlumno >= 9):
-        reconocimiento = 0.15 * precioMatricula
-        categoria = "A"
-        print(f"El alumno pertenece a la categoría {categoria} y recibe {reconocimiento}€ como reconocimiento.")
-    elif notaAlumno < 9 and notaAlumno >= 7:
-        reconocimiento = 0.10 * precioMatricula
-        catergoria = "B"
-        print(f"El alumno pertenece a la categoría {categoria} y recibe {reconocimiento}€ como reconocimiento.")
-    elif notaAlumno < 7 and notaAlumno >= 5:
-        reconocimiento = 0.05 * precioMatricula
-        categoria = "C"
-        print(f"El alumno pertenece a la categoría {categoria} y recibe {reconocimiento}€ como reconocimiento.")
-    else:
-        categoria=("suspenso")
-        print(f"El alumno esta {categoria}")
-
-except ValueError as e:
-    print(f"Error: {e}")
+if (notaAlumno >= 9):
+    reconocimiento = 0.15 * precioMatricula
+    categoria = "A"
+    print(f"El alumno pertenece a la categoría {categoria} y recibe {reconocimiento}€ como reconocimiento.")
+elif notaAlumno < 9 and notaAlumno >= 7:
+    reconocimiento = 0.10 * precioMatricula
+    catergoria = "B"
+    print(f"El alumno pertenece a la categoría {categoria} y recibe {reconocimiento}€ como reconocimiento.")
+elif notaAlumno < 7 and notaAlumno >= 5:
+    reconocimiento = 0.05 * precioMatricula
+    categoria = "C"
+    print(f"El alumno pertenece a la categoría {categoria} y recibe {reconocimiento}€ como reconocimiento.")
+else:
+    categoria=("suspenso")
+    print(f"El alumno esta {categoria}")

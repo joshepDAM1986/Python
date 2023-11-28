@@ -24,6 +24,7 @@ def castear_datos(persona):
     for (atributo,valor) in persona.items():
         tipo_valor=tipo(valor)
         funcionTipo = transformer.get(tipo_valor.lower(), lambda x:x)
+        
         persona[atributo]=funcionTipo(valor)
         # Lo mismo pero en una sola linea
         persona[atributo]=transformer.get(tipo_valor,lambda x:x)(valor)

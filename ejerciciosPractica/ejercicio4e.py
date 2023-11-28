@@ -10,6 +10,8 @@ notas={
     "Miguel":6.0
 }
 
-listAlumnos=sorted(notas, key=notas.get)
-cadAlumnos="\n".join(listAlumnos)
-print(cadAlumnos)
+def nombresAlumnosOrdenados():
+    listAlumnos=sorted(notas, key=notas.get) # guarda una lista ordenada con los nombre ordenados de menor a mayor por nota
+    cadAlumnos=" ".join(listAlumnos) # guarda un string con el contenido de la lista separados por espacios
+    return cadAlumnos # muestra el string obtenido
+print(nombresAlumnosOrdenados())

@@ -5,13 +5,23 @@
 
 import random
 
-numContraseñas=int(input("Ingrese el numero de contraeñas: "))
-longContraseñas=int(input("Ingrese cuan larga será la contraseña: "))
+numContraseñas=int(input("Ingrese el numero de contraseñas: "))
+longContraseñas=int(input("Ingrese la longitud de las contraseñas: "))
 cadena="0123456789@ABCDEFGHIJKLMNOPQRSTUVXYZ\]_abdefghijklmnpqrstuvwxyz"
 
 for i in range(numContraseñas):
     contContraseña = i + 1
-    resultado = ""
+    resultadoCadena = ""
     for i in range(longContraseñas):
-        resultado += random.choice(cadena)
-    print(f"Contraseña {contContraseña}: {resultado}")
+        resultadoCadena += random.choice(cadena)
+    print(f"Contraseña {contContraseña}: {resultadoCadena}")
+print("-----------------------------------------------------------------------------------------------------------------")
+
+listaCadena=list(cadena)
+
+for i in range(numContraseñas):
+    contContraseña = i + 1
+    resultadoLista=""
+    for i in range(longContraseñas):
+        resultadoLista+=random.choice(listaCadena)
+    print(f"Contraseña {contContraseña}: {resultadoLista}")
