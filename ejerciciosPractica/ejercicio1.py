@@ -13,7 +13,6 @@ notaAlumno=0.0
 reconocimiento=0.0
 categoria=""
 
-
 notaAlumno = float(input("Ingrese la nota del alumno: "))
 if notaAlumno <0 or notaAlumno >10:
     print("La nota no puede ser menor de cero ni mayor de 10")
