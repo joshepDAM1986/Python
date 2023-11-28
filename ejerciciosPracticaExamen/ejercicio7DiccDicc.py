@@ -88,11 +88,12 @@ def mostrarJuegoBarato(diccJuegos):
     print(juegoBarato)
 
 def crearString(diccJuegos):
-    nuevoString = ";".join(cabecera)
-    for nombre, juegoInfo in diccJuegos.items():
-        juego_info_str = [str(juegoInfo[cabecera]) for cabecera in cabecera]
-        nuevoString += "\n" + ";".join(juego_info_str)
-    print(nuevoString)
+    cabezera=""
+    datos=""
+    for juego in diccJuegos.values():
+        cabezera = ";".join(diccJuegos.keys())
+        datos += f"{juego['Juego']};{juego['Precio']};{juego['Genero']};{juego['Disponible']}\n"
+    return f"{cabecera}\n{datos}"
 
 def crearDiccionario(minPrecio, diccJuegos):
     nuevoDiccionario = {
