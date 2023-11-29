@@ -23,11 +23,9 @@ frutas= {
 }
 
 def comprarKilos():
-    fruta = ""
-    precio = 0.0
     precioTotal = 0.0
     kilos=int(input("Ingrese el número de kilos: "))
-    for elemento, valor  in frutas.items():
+    for elemento, valor in frutas.items():
         precio=round(valor*kilos,2)
         precioTotal+=precio
         fruta=elemento

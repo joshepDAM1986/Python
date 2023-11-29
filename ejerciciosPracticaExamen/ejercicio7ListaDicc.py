@@ -75,7 +75,7 @@ def buscarJuegoNombre(nombre, listaJuegos):
 def listarJuegosDisponibles(listaJuegos):
     listaJuegosDisponibles=[]
     for juego in listaJuegos:
-        if juego["Disponible"]:
+        if juego["Disponible"]== True:
             listaJuegosDisponibles.append(juego)
     return listaJuegosDisponibles
 

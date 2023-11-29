@@ -15,9 +15,11 @@ for i in range(numContraseñas):
     for i in range(longContraseñas):
         resultadoCadena += random.choice(cadena)
     print(f"Contraseña {contContraseña}: {resultadoCadena}")
+
 print("-----------------------------------------------------------------------------------------------------------------")
 
 listaCadena=list(cadena)
+print(listaCadena)
 
 for i in range(numContraseñas):
     contContraseña = i + 1
@@ -25,3 +27,4 @@ for i in range(numContraseñas):
     for i in range(longContraseñas):
         resultadoLista+=random.choice(listaCadena)
     print(f"Contraseña {contContraseña}: {resultadoLista}")
+
