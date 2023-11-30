@@ -24,14 +24,17 @@ if (notaAlumno >= 9):
     reconocimiento = 0.15 * precioMatricula
     categoria = "A"
     print(f"El alumno pertenece a la categoría {categoria} y recibe {reconocimiento}€ como reconocimiento.")
+
 elif notaAlumno < 9 and notaAlumno >= 7:
     reconocimiento = 0.10 * precioMatricula
     catergoria = "B"
     print(f"El alumno pertenece a la categoría {categoria} y recibe {reconocimiento}€ como reconocimiento.")
+
 elif notaAlumno < 7 and notaAlumno >= 5:
     reconocimiento = 0.05 * precioMatricula
     categoria = "C"
     print(f"El alumno pertenece a la categoría {categoria} y recibe {reconocimiento}€ como reconocimiento.")
+
 else:
     categoria=("suspenso")
     print(f"El alumno esta {categoria}")
