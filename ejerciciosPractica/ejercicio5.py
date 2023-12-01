@@ -47,7 +47,7 @@ print()
 #  Crear otro diccionario a partir del anterior con las frutas ordenadas de mayor a menor precio.
 
 def diccFrutasOrdenadas():
-    frutasOrdenadas = {fruta: precio for fruta, precio in sorted(frutas.items(), key=lambda x:x[1], reverse=True)}
+    frutasOrdenadas = dict(sorted(frutas.items(), key=lambda x:x[1], reverse=True))
     return frutasOrdenadas
 print(diccFrutasOrdenadas())
 print()

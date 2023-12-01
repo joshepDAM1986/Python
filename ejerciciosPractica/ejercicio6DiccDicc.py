@@ -57,7 +57,6 @@ FIFA 2022;59.99;Deportivo;False"""
 
 lineas = juegos.split("\n")
 cabecera = lineas[0].split(";")
-
 diccJuegos={}
 
 for linea in lineas[1:]:
