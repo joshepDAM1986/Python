@@ -15,8 +15,8 @@ lista=[4,8,14,22]
 
 def funMostrar(lista):
     for i in range(0, len(lista)):
-        print("posicion", i, ":", lista[i])
-
+        resultado="posicion", i, ":", lista[i]
+        return resultado
 def funModificar(lista):
     for i in range(0, len(lista)):
         lista[i] *= 2

@@ -3,6 +3,7 @@ def es_float(cadena):
     return (len(partes) == 2
             and partes[0].isdigit()
             and partes[1].isdigit())
+
 def tipo(cadena):
     if cadena.isdigit():
         return "int"
@@ -13,7 +14,6 @@ def tipo(cadena):
     else:
         return "string"
 
-
 def castear_datos(persona):
     for (atributo, valor) in persona.items():
         tipo_valor = tipo(valor)
@@ -23,8 +23,6 @@ def castear_datos(persona):
             persona[atributo] = float(valor)
         elif tipo_valor == "boolean":
             persona[atributo] = eval(valor)
-
-
 
 datos = """dni;nombre;email;teléfono;descuento;vip
 01234567L;Luis González;luisgonzalez@mail.com;+34656343576;12.5;True
