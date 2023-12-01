@@ -30,6 +30,5 @@ def diccOrdenado():
     for titulo, precio in sorted(librosOrdenados.items()):
         librosListados += f'Título: {titulo.upper()} | Precio: ${precio}\n'
     return librosListados
-
 print(diccOrdenado())
 
