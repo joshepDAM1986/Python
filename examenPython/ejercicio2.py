@@ -7,21 +7,21 @@ if numTiradas <0:
 else:
     JugadorA=[random.randint(1,6) for i in range(numTiradas)]
     print(JugadorA)
-    maxResultadoJ1=max(JugadorA)
-    minResultadoJ1=min(JugadorA)
-    sumPuntosJ1=maxResultadoJ1+minResultadoJ1
-    print(sumPuntosJ1)
+    maxResultadoJA=max(JugadorA)
+    minResultadoJA=min(JugadorA)
+    sumPuntosJA=maxResultadoJA+minResultadoJA
+    print(sumPuntosJA)
 
     JugadorB=[random.randint(1,6) for i in range(numTiradas)]
     print(JugadorB)
-    maxResultadoJ2=max(JugadorB)
-    minResultadoJ2=min(JugadorB)
-    sumPuntosJ2=maxResultadoJ2+minResultadoJ2
-    print(sumPuntosJ2)
+    maxResultadoJB=max(JugadorB)
+    minResultadoJB=min(JugadorB)
+    sumPuntosJB=maxResultadoJB+minResultadoJB
+    print(sumPuntosJB)
 
-    if sumPuntosJ1 > sumPuntosJ2:
+    if sumPuntosJA > sumPuntosJB:
         print("Jugador 1 gana!!")
-    elif sumPuntosJ2 > sumPuntosJ1:
+    elif sumPuntosJB > sumPuntosJA:
         print("Jugador 2 gana!!")
     else:
         print("Empate!!")
