@@ -1,4 +1,4 @@
-import  random
+import random
 
 numTiradas = int(input("Número de tiradas: "))
 
