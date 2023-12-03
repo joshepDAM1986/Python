@@ -6,9 +6,7 @@ transformar = {
 
 def es_float(cadena):
     partes = cadena.split(".")
-    return (len(partes) == 2 and
-     partes[0].isdigit() and
-     partes[1].isdigit())
+    return (len(partes) == 2 and partes[0].isdigit() and partes[1].isdigit())
 
 def tipo(cadena):
     if cadena.isdigit():
