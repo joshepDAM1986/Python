@@ -22,7 +22,6 @@ def funPotencia(numero):
 
     return f"{numero} elevado a la potencia {exponente} es {resultado}"
 
-
 funciones = {
     "factorial":funFactorial,
     "potencia":funPotencia

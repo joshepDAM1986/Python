@@ -12,7 +12,6 @@ def libroMasCaro():
     return (f"{libroCaro}")
 print(libroMasCaro())
 
-
 def precioLibros():
     precioTotal = 0.0
     nuevoPrecio={}
@@ -23,7 +22,6 @@ def precioLibros():
     return nuevoPrecio
 print(precioLibros())
 
-
 librosOrdenados=precioLibros()
 def diccOrdenado():
     librosListados = ""
@@ -31,4 +29,3 @@ def diccOrdenado():
         librosListados += f'Título: {titulo.upper()} | Precio: ${precio}\n'
     return librosListados
 print(diccOrdenado())
-
