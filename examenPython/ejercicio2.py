@@ -2,7 +2,7 @@ import random
 
 numTiradas = int(input("Número de tiradas: "))
 
-if numTiradas <0:
+if numTiradas < 0:
     print("Error")
 else:
     # JugadorA=[random.randint(1,6) for i in range(numTiradas)]
@@ -26,44 +26,57 @@ else:
     # else:
     #     print("Empate!!")
 
-    valorMin=7
-    valorMax=0
-    valorTotalJA=0
-    valorTotalJB=0
+    valorMinA = None
+    valorMaxA = None
+    valorMinB = None
+    valorMaxB = None
+    valorTotalJA = 0
+    valorTotalJB = 0
 
     for i in range(numTiradas):
-        numObtenido=random.randint(1,6)
-        if numObtenido>valorMax:
-            valorMax=numObtenido
-        if numObtenido<valorMin:
-            valorMin=numObtenido
-        valorTotalJA=valorMin+valorMax
-    print(f"valor maximo JA: {valorMax}")
-    print(f"valor minimo JA: {valorMin}")
+        conTirada= i+1
+        numObtenido = random.randint(1, 6)
+        if valorMaxA == None:
+            valorMaxA = numObtenido
+        if numObtenido > valorMaxA:
+            valorMaxA = numObtenido
+        if valorMinA == None:
+            valorMinA = numObtenido
+        if numObtenido < valorMinA:
+            valorMinA = numObtenido
+        valorTotalJA = valorMinA + valorMaxA
+        print(f"Numeros tirada {conTirada} : {numObtenido}")
+    print(f"valor maximo JA: {valorMaxA}")
+    print(f"valor minimo JA: {valorMinA}")
     print(f"total JA: {valorTotalJA}")
 
-    for i in range(numTiradas):
+    for j in range(numTiradas):
+        conTirada = j + 1
         numObtenido = random.randint(1, 6)
-        if numObtenido > valorMax:
-            valorMax = numObtenido
-        if numObtenido < valorMin:
-            valorMin = numObtenido
-        valorTotalJB = valorMin + valorMax
-    print(f"valor maximo JB: {valorMax}")
-    print(f"valor minimo JB: {valorMin}")
+        if valorMaxB == None:
+            valorMaxB = numObtenido
+        if numObtenido > valorMaxB:
+            valorMaxB = numObtenido
+        if valorMinB == None:
+            valorMinB = numObtenido
+        if numObtenido < valorMinB:
+            valorMinB = numObtenido
+        valorTotalJB = valorMinB + valorMaxB
+        print(f"Numeros tirada {conTirada}: {numObtenido}")
+    print(f"valor maximo JB: {valorMaxB}")
+    print(f"valor minimo JB: {valorMinB}")
     print(f"total JB: {valorTotalJB}")
 
-    if valorTotalJA>valorTotalJB:
+    if valorTotalJA > valorTotalJB:
         print("Jugador A gana")
-    elif valorTotalJB>valorTotalJA:
+    elif valorTotalJB > valorTotalJA:
         print("Jugador B gana")
     else:
         print("Empate")
 
-
-longContraseñas=int(input("Ingrese la longitud de las contraseñas: "))
-cadena="@$_ABCDEFRSTUVXYZghijklmnpq"
-resultadoCadena=""
+longContraseñas = int(input("Ingrese la longitud de las contraseñas: "))
+cadena = "@$_ABCDEFRSTUVXYZghijklmnpq"
+resultadoCadena = ""
 for i in range(longContraseñas):
     contContraseña = i + 1
     resultadoCadena += random.choice(cadena)

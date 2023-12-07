@@ -1,0 +1,9 @@
+nombre;precio;unidades;tipo;artesanal;distribuidor
+Guinnes Original;5.0;47;negra;true;Diageo S.A
+Heineken;4.0;50;rubia;false;Heineken International S.L.
+Ayinger Urweisse;5.3;71;roja;true;Ayinger S.A
+Guinnes West Indies Porter;5.0;7;negra;true;Diageo S.A
+Alhambra Red Ale;3.5;200;roja;true;Cervezas Alhambra S.A
+Alhambra Especial;2.5;150;rubia;false;Cervezas Alhambra S.A
+Alhambra 1925;3.5;200;rubia;true;Cervezas Alhambra S.A
+La Cibeles Castana;6.0;60;tostada;true;Cibeles S.A
